@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="pink">#e91e63</color>
+    <color name="colorInterpersonal">#e58500</color>
+    <color name="colorInterpersonalDark">#ca5b00</color>
+    <color name="colorEmotional">#51c14d</color>
+    <color name="colorEmotionalDark">#439f40</color>
+    <color name="colorDistress">#007dea</color>
+    <color name="colorDistressDark">#006bc9</color>
+</resources>

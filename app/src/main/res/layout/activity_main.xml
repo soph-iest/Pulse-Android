@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context="com.example.nate.pulse.MainActivity">
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/finishButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:onClick="finishApp"/>
+
+    <ImageView
+        android:id="@+id/progress_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="Progress Icon"
+        android:visibility="visible"
+        android:drawable="@mipmap/ic_assessment_white_24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="progressClicked"/>
+
+
+    <TextSwitcher
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/topText"
+        app:layout_constraintBottom_toTopOf="@+id/heart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp" />
+
+    <ImageView
+        android:id="@+id/heart"
+        android:layout_width="@dimen/heart_size"
+        android:layout_height="@dimen/heart_size"
+        android:scaleType="center"
+        android:contentDescription="Heart"
+        android:drawable="@drawable/pink_heart"
+        android:state_checked="true"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="183dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="onHeartBegin"/>
+
+
+    <TextSwitcher
+        android:id="@+id/bottomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heart"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/heart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/q1buttons">
+
+        <Button
+            android:id="@+id/q1button1"
+            android:onClick="interpersonal"
+            android:background="@drawable/mybutton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/heart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="50dp"
+            android:text="@string/button1"
+            android:alpha="0"
+            />
+
+        <Button
+            android:id="@+id/q1button2"
+            android:onClick="emotions"
+            android:background="@drawable/mybutton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="2dp"
+            app:layout_constraintTop_toBottomOf="@id/q1button1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="@string/q1button2"
+            android:alpha="0"
+            />
+
+        <Button
+            android:id="@+id/q1button3"
+            android:onClick="distress"
+            android:background="@drawable/mybutton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            app:layout_constraintTop_toBottomOf="@id/q1button2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="@string/q1button3"
+            android:alpha="0"
+            />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
